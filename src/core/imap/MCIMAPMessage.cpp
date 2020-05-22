@@ -68,7 +68,7 @@ Object * IMAPMessage::copy()
 String * IMAPMessage::description()
 {
     String * result = String::string();
-    result->appendUTF8Format("<%s:%p %u %u\n", className()->UTF8Characters(), this, (unsigned int) uid(), (unsigned int) sequenceNumber());
+    result->appendUTF8Format("<:)%s:%p %u %u\n", className()->UTF8Characters(), this, (unsigned int) uid(), (unsigned int) sequenceNumber());
     // result->appendString(header()->description());
     // if (mainPart() != NULL) {
     //     result->appendString(mainPart()->description());
