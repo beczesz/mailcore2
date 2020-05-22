@@ -128,11 +128,11 @@ Data * MessageParser::data()
 String * MessageParser::description()
 {
     String * result = String::string();
-    result->appendUTF8Format("<%s:%p ", MCUTF8(className()), this);
-    result->appendUTF8Format("<%p>", mMainPart);
-    if (mMainPart != NULL) {
-        result->appendString(mMainPart->description());
-    }
+    result->appendUTF8Format("<:)%s:%p ", MCUTF8(className()), this);
+    //result->appendUTF8Format("<%p>", mMainPart);
+    //if (mMainPart != NULL) {
+    //    result->appendString(mMainPart->description());
+    //}
     result->appendUTF8Characters(">");
     
     return result;
