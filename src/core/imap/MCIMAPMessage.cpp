@@ -69,11 +69,11 @@ String * IMAPMessage::description()
 {
     String * result = String::string();
     result->appendUTF8Format("<%s:%p %u %u\n", className()->UTF8Characters(), this, (unsigned int) uid(), (unsigned int) sequenceNumber());
-    result->appendString(header()->description());
-    if (mainPart() != NULL) {
-        result->appendString(mainPart()->description());
-        result->appendUTF8Characters("\n");
-    }
+    // result->appendString(header()->description());
+    // if (mainPart() != NULL) {
+    //     result->appendString(mainPart()->description());
+    //    result->appendUTF8Characters("\n");
+    // }
     result->appendUTF8Characters(">");
     return result;
 }
