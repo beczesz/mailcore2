@@ -130,38 +130,38 @@ String * MessageHeader::description()
     if (mMessageID != NULL) {
         result->appendUTF8Format("Message-ID: %s\n", mMessageID->UTF8Characters());
     }
-    if (mReferences != NULL) {
-        result->appendUTF8Format("References: %s\n", mReferences->description()->UTF8Characters());
-    }
-    if (mInReplyTo != NULL) {
-        result->appendUTF8Format("In-Reply-To: %s\n", mInReplyTo->description()->UTF8Characters());
-    }
-    if (mSender != NULL) {
-        result->appendUTF8Format("Sender: %s\n", mSender->description()->UTF8Characters());
-    }
-    if (mFrom != NULL) {
-        result->appendUTF8Format("From: %s\n", mFrom->description()->UTF8Characters());
-    }
-    if (mTo != NULL) {
-        result->appendUTF8Format("To: %s\n", mTo->description()->UTF8Characters());
-    }
-    if (mCc != NULL) {
-        result->appendUTF8Format("Cc: %s\n", mCc->description()->UTF8Characters());
-    }
-    if (mBcc != NULL) {
-        result->appendUTF8Format("Bcc: %s\n", mBcc->description()->UTF8Characters());
-    }
-    if (mReplyTo != NULL) {
-        result->appendUTF8Format("Reply-To: %s\n", mReplyTo->description()->UTF8Characters());
-    }
-    if (mSubject != NULL) {
-        result->appendUTF8Format("Subject: %s\n", mSubject->UTF8Characters());
-    }
-    if (mExtraHeaders != NULL) {
-        mc_foreachhashmapKeyAndValue(String, header, String, value, mExtraHeaders) {
-            result->appendUTF8Format("%s: %s\n", header->UTF8Characters(), value->UTF8Characters());
-        }
-    }
+    //if (mReferences != NULL) {
+    //    result->appendUTF8Format("References: %s\n", mReferences->description()->UTF8Characters());
+    //}
+    //if (mInReplyTo != NULL) {
+    //    result->appendUTF8Format("In-Reply-To: %s\n", mInReplyTo->description()->UTF8Characters());
+    //}
+    //if (mSender != NULL) {
+    //    result->appendUTF8Format("Sender: %s\n", mSender->description()->UTF8Characters());
+    //}
+    //if (mFrom != NULL) {
+    //    result->appendUTF8Format("From: %s\n", mFrom->description()->UTF8Characters());
+    //}
+    //if (mTo != NULL) {
+    //    result->appendUTF8Format("To: %s\n", mTo->description()->UTF8Characters());
+    //}
+    //if (mCc != NULL) {
+    //    result->appendUTF8Format("Cc: %s\n", mCc->description()->UTF8Characters());
+    //}
+    //if (mBcc != NULL) {
+    //    result->appendUTF8Format("Bcc: %s\n", mBcc->description()->UTF8Characters());
+    //}
+    //if (mReplyTo != NULL) {
+    //    result->appendUTF8Format("Reply-To: %s\n", mReplyTo->description()->UTF8Characters());
+    //}
+    //if (mSubject != NULL) {
+    //    result->appendUTF8Format("Subject: %s\n", mSubject->UTF8Characters());
+    //}
+    //if (mExtraHeaders != NULL) {
+    //    mc_foreachhashmapKeyAndValue(String, header, String, value, mExtraHeaders) {
+    //        result->appendUTF8Format("%s: %s\n", header->UTF8Characters(), value->UTF8Characters());
+    //    }
+    //}
     result->appendUTF8Format(">");
     
     return result;

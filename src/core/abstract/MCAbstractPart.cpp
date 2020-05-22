@@ -84,11 +84,11 @@ String * AbstractPart::description()
     }
     result->appendUTF8Format("inline: %i\n", mInlineAttachment);
     result->appendUTF8Format("attachment: %i\n", mAttachment);
-    if (mContentTypeParameters != NULL) {
-        mc_foreachhashmapKeyAndValue(String, key, String, value, mContentTypeParameters) {
-            result->appendUTF8Format("%s: %s\n", key->UTF8Characters(), value->UTF8Characters());
-        }
-    }
+    //if (mContentTypeParameters != NULL) {
+    //    mc_foreachhashmapKeyAndValue(String, key, String, value, mContentTypeParameters) {
+    //        result->appendUTF8Format("%s: %s\n", key->UTF8Characters(), value->UTF8Characters());
+    //    }
+    //}
     result->appendUTF8Format(">");
     
     return result;
